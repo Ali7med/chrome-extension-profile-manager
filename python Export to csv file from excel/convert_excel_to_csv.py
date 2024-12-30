@@ -1,3 +1,23 @@
+import subprocess
+import sys
+
+# Function to install a library
+def install_library(library_name):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", library_name])
+
+# Function to ensure all required libraries are installed
+def ensure_libraries_installed(libraries):
+    for lib in libraries:
+        try:
+            __import__(lib)
+        except ImportError:
+            print(f"{lib} not found. Installing...")
+            install_library(lib)
+
+# Check and install necessary libraries
+ensure_libraries_installed(["pandas", "openpyxl"])
+
+# Import the libraries after ensuring they are installed
 import pandas as pd
 import csv
 
