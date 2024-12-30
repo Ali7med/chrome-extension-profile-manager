@@ -13,7 +13,7 @@ This Chrome extension provides a simple and efficient way to manage profiles acr
 
 ### Install
 
-- Download the Chrome extension from the [GitHub repository](https://github.com/Ali7med/chrome-extension-profile-manager).
+- Download the Chrome extension from the [GitHub repository](https://github.com/Ali7med/chrome-extension-profile-manager-autofill).
 - Open Chrome and navigate to the "Extensions" page.
 - Click on the "Load unpacked" button.
 - Select the folder containing the extension files. It should be named "profile-manager".

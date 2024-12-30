@@ -104,7 +104,7 @@ function selectProfile(profileName, filteredProfiles) {
         }
 
         // Close the extension popup
-        //window.close();
+        window.close();
       }
     );
   });
