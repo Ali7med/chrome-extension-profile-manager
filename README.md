@@ -1,8 +1,8 @@
-# Chrom extension for profile manager
+# Chrome Extension for Profile Management and Auto-Fill
 
-### Description
+## Description
 
-This Chrome extension provides a simple and efficient way to manage profiles across multiple websites. It allows users to search, add, edit, and delete profiles, import and export profiles to/from CSV, and automatically fill forms based on the selected profile.
+This Chrome extension provides a simple and efficient way to manage profiles across multiple websites. It allows users to search, add, edit, and delete profiles, import and export profiles to/from CSV, and automatically fill forms based on the selected profile. The auto-fill feature ensures that forms are completed quickly and accurately using the information from the chosen profile.
 
 ### Features
 
