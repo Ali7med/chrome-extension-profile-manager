@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Manager</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Profile Manager</h1>
+
+      <!-- Tabs -->
+      <div id="tabs">
+        <button class="tab-button active" data-tab="search">
+          Search Profile
+        </button>
+        <button class="tab-button" data-tab="profiles">Profiles</button>
+        <button class="tab-button" data-tab="settings">Settings</button>
+      </div>
+
+      <!-- Tab Content -->
+      <div id="tab-content">
+        <!-- Search Tab -->
+        <div class="tab-content" id="search-tab">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by profile name or field..."
+          />
+          <div id="searchResult">
+            <!-- Filtered profile results will be displayed here -->
+          </div>
+        </div>
+
+        <!-- Profiles Tab -->
+        <div class="tab-content" id="profiles-tab">
+          <form id="profile-form" class="form-container">
+            <input
+              type="text"
+              id="profileName"
+              placeholder="Profile Name"
+              required
+            />
+            <textarea
+              id="profileFields"
+              placeholder="Fields (e.g., #name:John Doe, #email:john@example.com)"
+              required
+            ></textarea>
+            <div class="button-container">
+              <button id="saveProfile" type="submit">
+                Add / Update Profile
+              </button>
+              <button
+                id="clearProfilesButton"
+                class="clear-button"
+                type="button"
+              >
+                Clear All Profiles
+              </button>
+            </div>
+            <!-- New button to clear profiles -->
+          </form>
+          <h3>Existing Profiles</h3>
+          <input
+            type="text"
+            id="searchInput2"
+            placeholder="Search by profile name or field..."
+          />
+          <div id="existingProfiles" class="form-container">
+            No profiles available.
+          </div>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="settings-tab">
+          <h4>Import / Export Profiles</h4>
+          <label for="importFileInput">Import Profiles from CSV:</label>
+          <input type="file" id="importFileInput" accept=".csv" />
+          <button id="importCsvButton">Import from CSV</button>
+
+          <h4>Export Profiles to CSV:</h4>
+          <button id="exportProfiles">Export to CSV</button>
+          <div class="aboutContainer">
+            <div id="version"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./popup.js"></script>
+    <script src="./searchProfiles.js"></script>
+    <script src="./storeProfiles.js"></script>
+    <script src="./exportProfiles.js"></script>
+    <script src="./importProfiles.js"></script>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 15px;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #444;
+    margin-bottom: 10px;
+    margin: 3px;
+  }
+  
+  #app {
+    margin-bottom: 20px;
+  }
+  
+  
+  .profile-item {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .profile-item:hover {
+    transform: translateX(5px);
+    background-color: #f1f1f1;
+  }
+  
+  .profile-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-right: auto; /* Push buttons to the right */
+  }
+  
+  .profile-actions {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+  }
+  
+  .edit-button {
+    background-color: #3498db; /* Blue for edit */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+  }
+  
+  .delete-button {
+    background-color: #e74c3c; /* Red for delete */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  
+  /* Tabs */
+  #tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 12px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #333;
+  }
+  
+  .tab-button.active {
+    background-color: #4caf50;
+    color: rgb(37, 27, 27);
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab-button:hover {
+    background-color: #6df0f5;
+  }
+  
+  .tab-content {
+    display: none;
+    padding: 15px;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* Search Tab */
+  #searchInput,#searchInput2 {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  #searchInput,#searchInput2:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Search Results */
+  #searchResult {
+    margin-top: 15px;
+    color: #888;
+  }
+  
+  .button-container{
+    display: flex;
+    justify-content: space-between
+  }
+  .form-container{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px
+  }
+  .aboutContainer{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f4f4f9;
+    color: #333;
+    margin-top: 10px
+  }
+  .profile-item {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .profile-item:hover {
+    transform: translateX(5px);
+    background-color: #f1f1f1;
+  }
+  
+  .profile-item span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+   
+  
+  /* Delete Button */
+  .clear-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .clear-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Edit Button */
+  .edit-button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Profile Tab */
+  #profileName,
+  #profileFields {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    display: block;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Settings Tab */
+  #importProfiles,
+  #exportProfiles {
+    margin-top: 5px;
+    padding: 10px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  

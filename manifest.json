@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Profile Manager",
+  "description": "Manage profiles to auto-fill forms.",
+  "version": "1.3",
+  "author": "Ali Hameed (Ali7med)",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab",
+    "debugger",
+    "tabs"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*", "<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./icons/icon-72x72.png",
+      "48": "./icons/icon-72x72.png",
+      "128": "./icons/icon-128x128.png"
+    }
+  },
+  "icons": {
+    "16": "./icons/icon-72x72.png",
+    "48": "./icons/icon-72x72.png",
+    "128": "./icons/icon-128x128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Z",
+        "mac": "Command+Shift+Z"
+      },
+      "description": "Open the extension popup"
+    }
+  }
+}
